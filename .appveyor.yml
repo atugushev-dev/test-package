@@ -9,11 +9,10 @@ build: false
 
 test_script:
   - echo "Install pip<18.0 version to force briefcase to upgrade pip"
-  - python pip install pip<18.0
+  - python -m pip install pip<18.0
   - echo "This command should fail with Access Denied error"
   - pip install --upgrade briefcase
 
-  - echo "--------------------------------------------------------------------------------"
   - echo "Install fixed version of pip (it's 17.0 version, briefcase wants to upgrade it)"
   - python -m pip install -e git+git://github.com/atugushev/pip@reproduce_issue_6841#egg=pip
   - echo "This command shoud print an error to use python -m pip ..."
