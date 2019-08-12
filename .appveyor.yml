@@ -8,7 +8,7 @@ install:
 build: false
 
 test_script:
-  - dir C:\Python36\Scripts
+  - ls C:\Python36\Scripts
   - echo "Install pip<18.0 version to force briefcase to upgrade pip"
   - python -m pip install pip==10.0.1
   - echo "This command should fail with Access Denied error"
