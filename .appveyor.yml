@@ -8,8 +8,8 @@ install:
 build: false
 
 test_script:
-  - dir /AL /B C:\Python36\Scripts
+  - C:\Python36\Scripts\pip --version
   - python -m pip install -e git+git://github.com/atugushev/pip@fix-issue-6841#egg=pip
-  - pip install --upgrade pip || true
-  - pip3 install --upgrade pip || true
-  - pip3.6 install --upgrade pip || true
+  - pip install --upgrade pip
+  - pip3 install --upgrade pip
+  - pip3.6 install --upgrade pip
