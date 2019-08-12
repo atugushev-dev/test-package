@@ -8,13 +8,7 @@ install:
 build: false
 
 test_script:
-  - ls C:\Python36\Scripts
-  - echo "Install pip<18.0 version to force briefcase to upgrade pip"
-  - python -m pip install pip==10.0.1
-  - echo "This command should fail with Access Denied error"
-  - pip install --upgrade briefcase || true
-
-  - echo "Install fixed version of pip (it's 17.0 version, briefcase wants to upgrade it)"
-  - python -m pip install -e git+git://github.com/atugushev/pip@reproduce_issue_6841#egg=pip
-  - echo "This command shoud print an error to use python -m pip ..."
-  - pip install --upgrade briefcase
+  - python -m pip install -e git+git://github.com/atugushev/pip@fix-issue-6841#egg=pip
+  - pip install --upgrade pip || true
+  - pip3 install --upgrade pip || true
+  - pip3.7 install --upgrade pip || true
