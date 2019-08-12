@@ -8,6 +8,7 @@ install:
 build: false
 
 test_script:
+  - where pip
   - python -m pip install -e git+git://github.com/atugushev/pip@fix-issue-6841#egg=pip
   - pip install --upgrade pip || true
   - pip3 install --upgrade pip || true
