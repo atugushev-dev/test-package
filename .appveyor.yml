@@ -8,7 +8,4 @@ install:
 build: false
 
 test_script:
-  - python -m pip install -U pip
-  - where python
-  - pip --version
-  - pip install setuptools
+  - python -c 'import os; print(os.path.abspath("CamelCase/ololo"))'
