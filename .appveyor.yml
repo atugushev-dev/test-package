@@ -8,6 +8,6 @@ install:
 build: false
 
 test_script:
-  - python -m pip install -U pip
+  - python -m pip install pip==9.0.1
   - python -m pip install -e git+git://github.com/atugushev/pip-tools@fix-issue-625#egg=pip-tools
   - pip-compile
