@@ -4,16 +4,9 @@ environment:
 
 install:
     - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
+    - python -m pip install --upgrade git+git://github.com/pypa/pip@master#egg=pip==19.3.dev0
 
 build: false
 
 test_script:
-  - echo "Install pip<18.0 version to force briefcase to upgrade pip"
-  - python -m pip install pip==10.0.1
-  - echo "This command should fail with Access Denied error"
-  - pip install --upgrade briefcase || true
-
-  - echo "Install fixed version of pip (it's 17.0 version, briefcase wants to upgrade it)"
-  - python -m pip install -e git+git://github.com/atugushev/pip@reproduce_issue_6841#egg=pip
-  - echo "This command shoud print an error to use python -m pip ..."
-  - pip install --upgrade briefcase
+  - pip install pip!=19.3.dev0
