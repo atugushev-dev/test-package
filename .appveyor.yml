@@ -9,4 +9,4 @@ install:
 build: false
 
 test_script:
-  - pip install pip!=19.3.dev0
+  - pip install pip
