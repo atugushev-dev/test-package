@@ -1,6 +1,6 @@
 environment:
     global:
-      PYTHON: "C:\\Python36"
+      PYTHON: "C:\\Python27"
 
 install:
     - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
@@ -9,4 +9,5 @@ install:
 build: false
 
 test_script:
-  - pip install pip
+  - python -V
+  - python t.py
